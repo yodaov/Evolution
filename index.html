@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2D Evolution Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="ui">
+    <h1>2D Evolution Simulator</h1>
+    <div class="controls">
+      <label>
+        Simulation speed:
+        <input type="range" id="speedSlider" min="0" max="4" step="1" value="2">
+      </label>
+      <span id="speedLabel">Normal</span>
+      <button id="pauseBtn">Pause</button>
+      <button id="resetBtn">New World</button>
+    </div>
+    <div class="stats">
+      <span>Year: <span id="yearDisplay">0</span></span>
+      <span>Creatures: <span id="creatureCount">0</span></span>
+      <span>Species: <span id="speciesCount">0</span></span>
+    </div>
+    <p class="hint">
+      Hint: Use the slider to slow down or speed up evolution. Each reproduction can cause mutations that increase food needs.
+    </p>
+  </div>
+
+  <canvas id="worldCanvas" width="800" height="600"></canvas>
+
+  <script src="main.js"></script>
+</body>
+</html>
